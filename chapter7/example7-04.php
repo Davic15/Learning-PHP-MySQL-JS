@@ -1,12 +1,12 @@
 <?php
-    $fn = fopen("testfile.txt", "w") or die ("Failed to create a file");
+    $fh = fopen("testfile.txt", "w") or die ("Failed to create a file");
     $text = <<<_END
         Line 1
         Line 2
         Line 3
     _END;
 
-    fwrite($fn, $text) or die ("Could not write to file");
-    fclose($fn);
+    fwrite($fh, $text) or die ("Could not write to file");
+    fclose($fh);
     echo "File 'testfile.txt' written successfully";
 ?>
